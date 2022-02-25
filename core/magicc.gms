@@ -183,10 +183,12 @@ putclose magicc_scenario
 *** write sed scripts to edit MAGICC configuration files
 put  magicc_sed_script
 
-put 's|  FILE_EMISSIONSCENARIO.*|  FILE_EMISSIONSCENARIO =  "REMIND_%c_expname%",|g' /;
+put 's|  FILE_EMISSCEN.*|  FILE_EMISSCEN =  "REMIND_%c_expname%.SCEN",|g' /;
 put 's|  RUNNAME.*|  RUNNAME =  "%c_expname%",|g' /;
 put 's|  RUNDATE.*|  RUNDATE =  "%system.date%",|g' /;
-put 's|  RF_SOLAR_SCALE =.*|  RF_SOLAR_SCALE =  0,|g' /;
+
+*** pflueger: I have no idea why we should set the RF_SOLAR_SCALE to zero, so we don't
+*** put 's|  RF_SOLAR_SCALE =.*|  RF_SOLAR_SCALE =  0,|g' /;
 
 putclose magicc_sed_script;
 
