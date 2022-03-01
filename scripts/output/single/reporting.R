@@ -39,20 +39,16 @@ print("end generation of mif files")
 
 #  MAGICC code not working with REMIND-EU										   
 # generate MAGICC reporting and append to REMIND reporting
-if (0 == nchar(Sys.getenv('MAGICC_BINARY'))) {
-  warning('Can\'t find magicc executable under environment variable MAGICC_BINARY')
-} else {
-  system(paste("cd ",outputdir ,"/magicc; ",
+system(paste("cd ",outputdir ,"/magicc; ",
              "pwd;",
              "sed -f modify_MAGCFG_USER_CFG.sed -i MAGCFG_USER.CFG; ",
-             Sys.getenv('MAGICC_BINARY'), '; ',
+             "/home/pflueger/magicc7-remind-dirty/magicc; ",
              "awk -f MAGICC_reporting.awk -v c_expname=\"", scenario, "\"",
              " < climate_reporting_template.txt ",
              " > ","../../../", magicc_reporting_file,"; ",
              "sed -i 's/glob/World/g' ","../../../", magicc_reporting_file, "; ",
              "cat ", "../../../",magicc_reporting_file, " >> ", "../../../",remind_reporting_file, "; ",
              sep = ""))
-}
 
 ## generate EDGE-T reporting if it is needed
 ## the reporting is appended to REMIND_generic_<scenario>.MIF
