@@ -42,7 +42,7 @@ print("end generation of mif files")
 system(paste("cd ",outputdir ,"/magicc; ",
              "pwd;",
              "sed -f modify_MAGCFG_USER_CFG.sed -i MAGCFG_USER.CFG; ",
-             "/home/pflueger/magicc7-remind-dirty/magicc; ",
+             "/home/pflueger/magicc7-remind-dirty/magicc/magicc; ",
              "awk -f MAGICC_reporting.awk -v c_expname=\"", scenario, "\"",
              " < climate_reporting_template.txt ",
              " > ","../../../", magicc_reporting_file,"; ",
