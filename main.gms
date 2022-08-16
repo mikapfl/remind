@@ -629,6 +629,7 @@ $setglobal cm_INCONV_PENALTY  on         !! def = on
 $setglobal cm_INCONV_PENALTY_FESwitch  on !! def = on
 $setGlobal cm_so2_out_of_opt  on         !! def = on
 $setGlobal c_skip_output  off        !! def = off
+$setGlobal c_skip_output_magicc  off        !! def = off
 $setGlobal cm_MOFEX  off        !! def = off
 $setGlobal cm_conoptv  conopt3    !! def = conopt3
 $setGlobal cm_ccsfosall  off        !! def = off
@@ -768,7 +769,9 @@ $include    "./core/loop.gms";
 $ifthen.c_skip_output %c_skip_output% == "off"
 $include    "./core/output.gms";
 $batinclude "./modules/include.gms"    output
+$ifthen.c_skip_output_magicc %c_skip_output_magicc% == "off"
 $include "./core/magicc.gms";    !!connection to MAGICC, needed for post-processing
+$endif.c_skip_output_magicc
 $endif.c_skip_output
 
 *** EOF ./main.gms

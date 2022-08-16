@@ -1419,6 +1419,9 @@ pm_emifac(ttot,regi,"seliqfos","fedie","tdfosdie","co2") = p_ef_dem(regi,"fedie"
 *** the differences are cancelled out here!!!
 pm_cesdata(ttot,regi,in,"offset_quantity")$(ttot.val ge 2005)       = 0;
 
+*** only need to input data for magicc if it is used
+$ifthen.magicc_used %c_skip_output_magicc% == "off" or "%climate%" == "magicc"
+
 *** ----- MAGICC RCP scenario emission data -----------------------------------
 *** load default values from the scenario depending on cm_rcp_scen
 *** (0): no RCP scenario, standard setting
@@ -1443,6 +1446,8 @@ $offdelim
 p_regi_2_MAGICC_regions(regi,"WORLD") = 1;
 p_regi_2_MAGICC_regions(regi,"BUNKERS") = 0;
 display p_regi_2_MAGICC_regions ;
+
+$endif.magicc_used
 
 ***-----------------------------------------------------------------
 *RP* vintages

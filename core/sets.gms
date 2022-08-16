@@ -1099,13 +1099,14 @@ t(ttot)$(ttot.val ge cm_startyear)=Yes;
 tsu(ttot)$(ttot.val lt 2005)=Yes;
 display ttot;
 
+$ifthen.magicc_used %c_skip_output_magicc% == "off" or "%climate%" == "magicc"
 *** time sets used for MAGICC
 Sets
   t_magiccttot(tall) "time periods including spin-up"
   t_magicc(tall)     "time periods exported to magicc"
   t_extra(tall)      "averaging between REMIND and MAGICC" / 2000 * 2004 /
 ;
-
+$endif.magicc_used
 
 
 
