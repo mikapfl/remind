@@ -635,6 +635,16 @@ $setGlobal cm_conoptv  conopt3    !! def = conopt3
 $setGlobal cm_ccsfosall  off        !! def = off
 
 $setGlobal cm_APscen  SSP2          !! def = SSP2
+
+$setGlobal cm_magicc_in_use  off    !! set automatically from c_skip_output_magicc and climate
+$ifthen "%c_skip_output_magicc%" == "off"
+$setglobal magicc_in_use on
+$endif
+
+$ifthen "%climate%" == "magicc"
+$setglobal magicc_in_use on
+$endif
+
 $setGlobal cm_magicc_calibrateTemperature2000  uncalibrated  !! def=uncalibrated
 $setGlobal cm_magicc_config  OLDDEFAULT    !! def = OLDDEFAULT
 $setGlobal cm_magicc_temperatureImpulseResponse  off           !! def = off

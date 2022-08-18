@@ -233,9 +233,12 @@ pm_temperatureImpulseResponseCO2(tall,tall)          "temperature impulse respon
 pm_taxCO2eqSCC(ttot,all_regi)                        "carbon tax component due to damages (social cost of carbon) "
 pm_GDPGross(tall,all_regi)                           "gross GDP (before damages)"
 
+$ifthen.magicc_used "%magicc_in_use%" == "on"
 ***----------------------------------------------------------------------------------------
 *** ----- Parameters needed for MAGICC ----------------------------------------------------
 p_MAGICC_emi(tall,RCP_regions_world_bunkers,emiRCP)  "emission data to export"
+$endif.magicc_used
+
 ***----------------------------------------------------------------------------------------
 ***---------------------------parameter for output-----------------------------------------
 o_DirlcoCCS(ttot,all_regi,all_te)                    "Annuity per sequestered CO2 by CCS technology, calc. from investment costs and fixOM. [$/tCO2]"
@@ -584,6 +587,7 @@ p_cintraw("pegas")  = 15.0 / s_zj_2_twa;
 ***----------------------------------------------------------------------------------------
 ***                                   F I L E S
 ***----------------------------------------------------------------------------------------
+$ifthen.magicc_used "%magicc_in_use%" == "on"
 file magicc_scenario /                                   "./magicc/REMIND_%c_expname%.SCEN" /;
 
 magicc_scenario.ap = 0;
@@ -592,7 +596,7 @@ magicc_scenario.pw = 3000;
 file magicc_sed_script /                                 "./magicc/modify_MAGCFG_USER_CFG.sed" /;
 
 magicc_sed_script.ap = 0;
-
+$endif.magicc_used
 
 
 *** INNOPATHS emissions reporting

@@ -1099,7 +1099,7 @@ t(ttot)$(ttot.val ge cm_startyear)=Yes;
 tsu(ttot)$(ttot.val lt 2005)=Yes;
 display ttot;
 
-$ifthen.magicc_used %c_skip_output_magicc% == "off" or "%climate%" == "magicc"
+$ifthen.magicc_used "%magicc_in_use%" == "on"
 *** time sets used for MAGICC
 Sets
   t_magiccttot(tall) "time periods including spin-up"
@@ -2131,6 +2131,8 @@ xirog       "parameters decribing exhaustible extraction coss including long-run
 /
       xi1, xi2, xi3, xi4, xi5, xi6, xi7, xi8, dec
 /
+
+$ifthen.magicc_used "%magicc_in_use%" == "on"
 *** emissions exported to MAGICC
   emiRCP "emission types exported to MAGICC"
   /
@@ -2158,6 +2160,7 @@ xirog       "parameters decribing exhaustible extraction coss including long-run
     HFC245fa
     SF6
   /
+$endif.magicc_used
 
   p                "parameter for ch4 and n2o waste emissions and co2 cement emissions"
   /
@@ -2169,6 +2172,7 @@ xirog       "parameters decribing exhaustible extraction coss including long-run
 *** This is a work-around to ensure emissions are printed in correct order.
   numberEmiRCP "number of emission types" / 1 * 23 /
 
+$ifthen.magicc_used "%magicc_in_use%" == "on"
   unitsMagicc "units used for MAGICC"
   /
     GtC
@@ -2180,6 +2184,7 @@ xirog       "parameters decribing exhaustible extraction coss including long-run
     MtN2O-N
     MtS
   /
+$endif.magicc_used
 
 ***-----------------------------------------------------------------------------
 *** Definition of the main characteristics set 'char':
@@ -2916,6 +2921,8 @@ sectorEndoEmi2te(all_enty,all_enty,all_te,sectorEndoEmi)	 "map sectors to techno
 	seliqfos.fepet.tdfospet.trans
         seliqsyn.fepet.tdsynpet.trans
 /
+
+$ifthen.magicc_used "%magicc_in_use%" == "on"
 emiRCP2emiREMIND "mapping between emission types expected by MAGICC and provided by REMIND"
 /
     CO    . CO
@@ -2978,7 +2985,7 @@ emiRCP2unitsMagicc(emiRCP,unitsMagicc) "match units to emission types"
     (NMVOC,BC,OC)         . Mt
     (CF4,C2F6,C6F14,HFC23,HFC32,HFC43-10,HFC125,HFC134a,HFC143a,HFC227ea,HFC245fa,SF6) . kt
 /
-
+$endif.magicc_used
 
 
 ue2ppfen(all_enty,all_in)      "matching UE in ESM to ppfEn in MACRO"
