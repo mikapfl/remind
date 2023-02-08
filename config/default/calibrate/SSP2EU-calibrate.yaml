@@ -1,0 +1,58 @@
+description: 'SSP2EU-calibration: This baseline scenario follows the Shared Socioeconomic
+  Pathways 2 called Middle of the Road.'
+start: calibrate
+slurmConfig: 14.0
+settings:
+  CES_parameters: calibrate
+  regionmapping: config/regionmappingH12.csv
+  cm_rcp_scen: none
+  cm_iterative_target_adj: 0
+  subsidizeLearning: 'off'
+  c_budgetCO2from2020: 0
+  carbonprice: none
+  cm_co2_tax_2020: -1
+  cm_peakBudgYr: 2100
+  cm_taxCO2inc_after_peakBudgYr: 3
+  cm_CO2priceRegConvEndYr: 2050
+  cm_emiscen: 1
+  c_regi_earlyreti_rate: GLO 0.09, EUR_regi 0.15
+  c_tech_earlyreti_rate: 'off'
+  cm_fetaxscen: 3
+  cm_co2_tax_growth: 1.05
+  trade: standard
+  cm_import_EU: 'off'
+  cm_bioenergy_SustTax: 1.5
+  cm_maxProdBiolc: 'off'
+  cm_bioprod_regi_lim: 'off'
+  cm_import_tax: 'off'
+  c_ccsinjecratescen: 1
+  c_ccscapratescen: 1
+  c_agricult_base_shift: 'off'
+  cm_CESMkup_build: standard
+  cm_CESMkup_ind: standard
+  cm_adj_coeff_multiplier: 'off'
+  cm_adj_seed_multiplier: 'off'
+  techpol: none
+  regipol: none
+  cm_emiMktTarget: 'off'
+  cm_NucRegiPol: 'off'
+  cm_CoalRegiPol: 'off'
+  cm_altFeEmiFac: 'off'
+  cm_POPscen: pop_SSP2EU
+  cm_GDPscen: gdp_SSP2EU
+  cm_demScen: gdp_SSP2EU
+  cm_oil_scen: medOil
+  cm_gas_scen: medGas
+  cm_coal_scen: medCoal
+  c_techAssumptScen: 1
+  cm_nucscen: 2
+  cm_so2tax_scen: 1
+  cm_multigasscen: 2
+  cm_LU_emi_scen: SSP2
+  cm_tradecostBio: 1.0
+  cm_1stgen_phaseout: 0
+  c_SSP_forcing_adjust: forcing_SSP2
+  cm_APscen: SSP2
+  water: heat
+  cm_EDGEtr_scen: Mix1
+  cm_startyear: 2005

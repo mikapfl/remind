@@ -1,0 +1,42 @@
+description: 'o_1p5c_d95_cpricereg_bIT: The Net Zero 2050 scenario assumes that ambitious
+  climate policies are introduced immediately, giving at least a 50 percent chance
+  of limiting global warming to below 1.5 K by the end of the century, with no or
+  low overshoot of 1.5 K in earlier years. Stringent climate policies and innovation
+  let net zero CO2 emissions to be reached around 2050. CDR is used to accelerate
+  the decarbonisation but kept to the minimum possible and broadly in line with sustainable
+  levels of bioenergy production. Physical risks are relatively low but transition
+  risks are high. Industry sectors are modeled explicitly with individual CES nests
+  for cement, chemicals, steel, and other production. The transport model EDGE-T with
+  detailed modes/vehicles representation is used. A simple buildings model represents
+  demand in terms of energy carriers. Damages from climate change based on Kalkuhl
+  and Wenz (2020) are internalized in the optimization using the 95th percentile of
+  RCP26.'
+start: '0'
+referenceScenario: SSP2-Base_covidCalib_bIT
+settings:
+  CES_parameters: load
+  climate: magicc
+  downscaleTemperature: CMIP5
+  cm_magicc_calibrateTemperature2000: HADCRUT4
+  damages: KWLike
+  internalizeDamages: KWlikeItrCPreg
+  cm_magicc_config: RCP26_95
+  cm_magicc_temperatureImpulseResponse: 'on'
+  c_CES_calibration_new_structure: 0
+  cm_EDGEtr_scen: Mix4
+  cm_reducCostB: heatpumps
+  cm_rcp_scen: rcp20
+  cm_iterative_target_adj: 9
+  subsidizeLearning: globallyOptimal
+  c_budgetCO2from2020: 560
+  carbonprice: diffCurvPhaseIn2Lin
+  carbonpriceRegi: netZero
+  cm_co2_tax_2020: 200
+  cm_peakBudgYr: 2045
+  cm_emiscen: 9
+  cm_maxProdBiolc: '100'
+  techpol: NDC
+  cm_startyear: 2025
+  path_gdx: o_1p5c_bIT_
+  path_gdx_ref: h_ndc_d95_bIT
+  path_gdx_bau: SSP2-Base_bIT

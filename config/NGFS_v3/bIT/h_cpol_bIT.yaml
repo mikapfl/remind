@@ -1,0 +1,25 @@
+description: 'h_cpol_bIT: The Current Policies scenario assumes that only currently
+  implemented policies are preserved, leading to high physical risks. Emissions grow
+  until 2080 leading to about 3 K of warming and severe physical risks. This includes
+  irreversible changes like higher sea level rise. Industry sectors are modeled explicitly
+  with individual CES nests for cement, chemicals, steel, and other production. The
+  transport model EDGE-T with detailed modes/vehicles representation is used. A simple
+  buildings model represents demand in terms of energy carriers. No Damages from climate
+  change are considered.'
+start: bIT
+referenceScenario: SSP2-Base_bIT
+slurmConfig: 5.0
+settings:
+  cm_damages_BurkeLike_persistenceTime: 30
+  cm_EDGEtr_scen: Mix3
+  cm_rcp_scen: rcp45
+  cm_iterative_target_adj: 3
+  carbonprice: NPi2018
+  cm_co2_tax_2020: 1
+  cm_emiscen: 9
+  cm_maxProdBiolc: '100'
+  techpol: NPi2018
+  cm_multigasscen: 3
+  cm_startyear: 2025
+  path_gdx_ref: h_ndc_bIT
+  path_gdx_bau: SSP2-Base_bIT

@@ -1,0 +1,40 @@
+description: 'SSP1-NDC: This Nationally Determined Contribution (NDC) scenario follows
+  the Shared Socioeconomic Pathways 1 called Sustainability. The NDC includes all
+  pledged policies even if not yet implemented. It assumes that the moderate and heterogeneous
+  climate ambition reflected in the NDCs at the begining of 2021 continues over the
+  21st century. This scenario serves as reference for all other policy scenarios and
+  The NPi scenario until 2020.'
+start: '1'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_rcp_scen: rcp45
+  cm_iterative_target_adj: 3
+  subsidizeLearning: globallyOptimal
+  carbonprice: NDC
+  cm_co2_tax_2020: 1
+  cm_emiscen: 9
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.13
+  cm_fetaxscen: 2
+  cm_co2_tax_growth: 1.025
+  cm_bioenergy_SustTax: 1.75
+  c_ccsinjecratescen: 2
+  techpol: NDC
+  cm_POPscen: pop_SSP1
+  cm_GDPscen: gdp_SSP1
+  cm_demScen: gdp_SSP1
+  cm_oil_scen: lowOil
+  cm_gas_scen: lowGas
+  cm_coal_scen: lowCoal
+  c_techAssumptScen: 2
+  cm_so2tax_scen: 4
+  cm_multigasscen: 3
+  cm_LU_emi_scen: SSP1
+  cm_tradecostBio: 0.5
+  cm_1stgen_phaseout: 1
+  c_SSP_forcing_adjust: forcing_SSP1
+  cm_APscen: SSP1
+  cm_EDGEtr_scen: Mix2
+  cm_startyear: 2025
+  path_gdx_ref: SSP2EU-NDC
+  path_gdx_bau: SSP1-Base

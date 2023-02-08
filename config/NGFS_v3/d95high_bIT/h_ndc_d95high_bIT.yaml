@@ -1,0 +1,26 @@
+description: 'h_ndc_d95high_bIT: The Nationally Determined Contributions (NDCs) scenario
+  includes all pledged policies even if not yet implemented. It assumes that the moderate
+  and heterogeneous climate ambition reflected in the NDCs at the begining of 2021
+  continues over the 21st century (low transition risks). Emissions decline but lead
+  nonetheless to about 2.5 K of warming associated with moderate to severe physical
+  risks. Transition risks are relatively low. Industry sectors are modeled explicitly
+  with individual CES nests for cement, chemicals, steel, and other production. The
+  transport model EDGE-T with detailed modes/vehicles representation is used. A simple
+  buildings model represents demand in terms of energy carriers. Damages from climate
+  change are based on Kalkuhl and Wenz (2020) using the 95th percentile of RCP26.'
+start: d95high_bIT
+referenceScenario: SSP2-Base_d95high_bIT
+slurmConfig: 14.0
+settings:
+  cm_EDGEtr_scen: Mix3
+  cm_rcp_scen: rcp45
+  cm_iterative_target_adj: 3
+  subsidizeLearning: globallyOptimal
+  carbonprice: NDC
+  cm_co2_tax_2020: 1
+  cm_emiscen: 9
+  cm_maxProdBiolc: '100'
+  techpol: NDC
+  cm_multigasscen: 3
+  cm_startyear: 2015
+  path_gdx: h_ndc_bIT

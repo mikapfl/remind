@@ -1,0 +1,44 @@
+description: 'SDP_EI-NPi: This National Policies Implemented (Npi) scenario following
+  the narrative of "Economy-driven innovation": tech & market driven - globalized
+  word - high-growth. The NPi is identical to the NDC scenario until 2020 but assumes
+  that policies fail to achieve NDC targets in 2030. Instead, carbon prices are assumed
+  to grow and converge more slowly, leading to emissions trajectories in line with
+  bottom-up studies on the effect of currently implemented policies.'
+start: '0'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_rcp_scen: rcp45
+  cm_iterative_target_adj: 3
+  carbonprice: NPi2018
+  cm_co2_tax_2020: 1
+  cm_emiscen: 9
+  c_regi_earlyreti_rate: GLO 0.14, EUR_regi 0.15
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.13
+  cm_fetaxscen: 2
+  cm_co2_tax_growth: 1.025
+  cm_bioenergy_SustTax: 1.75
+  cm_maxProdBiolc: '300'
+  c_ccscapratescen: 2
+  cm_CESMkup_build: feelhpb 1.05, fehob 1.75, feheb 0.1
+  cm_CESMkup_ind: feh2_otherInd 1.04, feelhth_otherInd 0.4, feh2_cement 2.0, feelhth_chemicals
+    1.3, feh2_chemicals 1.04
+  techpol: NPi2018
+  cm_POPscen: pop_SDP_EI
+  cm_GDPscen: gdp_SDP_EI
+  cm_demScen: gdp_SDP_EI
+  cm_oil_scen: lowOil
+  cm_gas_scen: lowGas
+  cm_coal_scen: lowCoal
+  c_techAssumptScen: 2
+  cm_so2tax_scen: 4
+  cm_multigasscen: 3
+  cm_LU_emi_scen: SDP
+  cm_tradecostBio: 0.5
+  cm_1stgen_phaseout: 1
+  c_SSP_forcing_adjust: forcing_SSP1
+  cm_APscen: SSP1
+  cm_EDGEtr_scen: Mix4
+  cm_startyear: 2025
+  path_gdx_ref: SSP2EU-NDC
+  path_gdx_bau: SDP_EI-Base

@@ -1,0 +1,24 @@
+description: 'EU21reg_Ref-gd40: This reference scenario is based on the Shared Socioeconomic
+  Pathways 2 for the 21 region REMIND-EU version and describes a current policy pathways
+  from the perspective of the EU in 2020 with the -40% 2030 EU emissions target that
+  was aimed at the time. It serves to produce consistent near-term trends for the
+  2020 time step where mild climate policies have been in place.'
+start: EU21
+referenceScenario: EU21reg_Base
+settings:
+  cm_rcp_scen: rcp26
+  cm_iterative_target_adj: 5
+  subsidizeLearning: globallyOptimal
+  c_budgetCO2from2020: 1100
+  carbonprice: expoLinear
+  cm_co2_tax_2020: 30
+  cm_emiscen: 9
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.13
+  cm_emiMktTarget: 2020.2030.EUR_regi.all.year.netGHG_noBunkers 3.3
+  cm_NucRegiPol: 'on'
+  cm_CoalRegiPol: 'on'
+  cm_EDGEtr_scen: Mix2
+  cm_startyear: 2020
+  path_gdx_ref: EU21reg_Base
+  path_gdx_bau: EU21reg_Base

@@ -1,0 +1,69 @@
+description: 'SSP2-Base_d50_bIT: This baseline scenario follows the Shared Socioeconomic
+  Pathways 2 called Middle of the Road. Industry sectors are modeled explicitly with
+  individual CES nests for cement, chemicals, steel, and other production. The transport
+  model EDGE-T with detailed modes/vehicles representation is used. A simple buildings
+  model represents demand in terms of energy carriers. Damages from climate change
+  are based on Kalkuhl and Wenz (2020) using the 50th percentile of RCP26.'
+start: d50high_bIT
+slurmConfig: 5.0
+settings:
+  optimization: nash
+  c_testOneRegi_region: EUR
+  CES_parameters: load
+  climate: magicc
+  downscaleTemperature: CMIP5
+  cm_magicc_calibrateTemperature2000: HADCRUT4
+  damages: KW_SE
+  cm_damage_KWSE: 1.96
+  internalizeDamages: 'off'
+  cm_magicc_config: RCP26_50
+  cm_magicc_temperatureImpulseResponse: 'off'
+  cm_damage_DiceLike_specification: HowardNonCatastrophic
+  cm_damages_BurkeLike_persistenceTime: 15
+  cm_damages_BurkeLike_specification: 0
+  cm_damages_SccHorizon: 100
+  cm_VRE_supply_assumptions: 0
+  c_CES_calibration_new_structure: 0
+  buildings: simple
+  transport: edge_esm
+  industry: subsectors
+  cm_DiscRateScen: 0
+  c_shBioTrans: 1
+  cm_EDGEtr_scen: Mix1
+  cm_reducCostB: none
+  cm_CES_calibration_default_prices: 0.01
+  c_ccsinjecratescen: 1
+  .CDR: 'off'
+  cm_bioenergy_SustTax: 1.5
+  cm_rcp_scen: none
+  cm_iterative_target_adj: 0
+  subsidizeLearning: 'off'
+  c_budgetCO2from2020: 0
+  carbonprice: none
+  carbonpriceRegi: none
+  cm_co2_tax_2020: -1
+  cm_peakBudgYr: 2100
+  cm_taxCO2inc_after_peakBudgYr: 3
+  cm_CO2priceRegConvEndYr: 2050
+  cm_emiscen: 1
+  cm_fetaxscen: 3
+  cm_co2_tax_growth: 1.05
+  cm_maxProdBiolc: 'off'
+  c_ccscapratescen: 1
+  techpol: none
+  cm_oil_scen: medOil
+  cm_gas_scen: medGas
+  cm_coal_scen: medCoal
+  c_techAssumptScen: 1
+  cm_nucscen: 2
+  cm_so2tax_scen: 1
+  cm_multigasscen: 2
+  cm_LU_emi_scen: SSP2
+  cm_tradecostBio: 1
+  cm_1stgen_phaseout: 0
+  c_SSP_forcing_adjust: forcing_SSP2
+  cm_APscen: SSP2
+  water: heat
+  cm_startyear: 2005
+  path_gdx_ref: SSP2-Base_bIT
+  path_gdx_bau: SSP2-Base_bIT

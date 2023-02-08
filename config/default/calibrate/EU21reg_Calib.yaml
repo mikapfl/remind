@@ -1,0 +1,13 @@
+description: 'EU21reg_Calib: This baseline calibration scenario follows the Shared
+  Socioeconomic Pathways 2 for the 21 region REMIND-EU version.'
+start: calibrate
+referenceScenario: SSP2EU-calibrate
+slurmConfig: 15.0
+settings:
+  regionmapping: ./config/21_regions_EU11/regionmapping_21_EU11.csv
+  extramappings_historic: ./config/21_regions_EU11/extramapping_EU27.csv
+  trade: se_trade
+  c_ccsinjecratescen: 2
+  regipol: regiCarbonPrice
+  cm_altFeEmiFac: EUR_regi, NEU_regi
+  water: 'off'

@@ -1,0 +1,39 @@
+description: 'SSP5-NPi: This National Policies Implemented (Npi) scenario follows
+  the Shared Socioeconomic Pathways 5 called Fossil-Fueled Development. The NPi is
+  identical to the NDC scenario until 2020 but assumes that policies fail to achieve
+  NDC targets in 2030. Instead, carbon prices are assumed to grow and converge more
+  slowly, leading to emissions trajectories in line with bottom-up studies on the
+  effect of currently implemented policies.'
+start: '1'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_rcp_scen: rcp45
+  cm_iterative_target_adj: 3
+  carbonprice: NPi2018
+  cm_co2_tax_2020: 1
+  cm_emiscen: 9
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.13
+  cm_fetaxscen: 1
+  cm_bioenergy_SustTax: 1.75
+  c_ccsinjecratescen: 3
+  c_ccscapratescen: 2
+  techpol: NPi2018
+  cm_POPscen: pop_SSP5
+  cm_GDPscen: gdp_SSP5
+  cm_demScen: gdp_SSP5
+  cm_oil_scen: highOil
+  cm_gas_scen: highGas
+  cm_coal_scen: highCoal
+  c_techAssumptScen: 3
+  cm_nucscen: 6
+  cm_so2tax_scen: 4
+  cm_multigasscen: 3
+  cm_LU_emi_scen: SSP5
+  cm_tradecostBio: 0.5
+  cm_1stgen_phaseout: 1
+  c_SSP_forcing_adjust: forcing_SSP5
+  cm_APscen: SSP5
+  cm_startyear: 2025
+  path_gdx_ref: SSP2EU-NDC
+  path_gdx_bau: SSP5-Base

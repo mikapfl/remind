@@ -1,0 +1,14 @@
+description: 'SSP2EU-NPi-calibrate: This reference policy/baseline scenario follows
+  the Shared Socioeconomic Pathways 2 called Middle of the Road.'
+start: calibrate
+referenceScenario: SSP2EU-calibrate
+slurmConfig: 14.0
+settings:
+  cm_rcp_scen: rcp45
+  carbonprice: NPi_Baseline
+  cm_co2_tax_2020: 1
+  cm_emiscen: 9
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.14
+  techpol: NPi2018
+  cm_multigasscen: 3

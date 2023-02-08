@@ -1,0 +1,31 @@
+description: 'o_2c_d95_bIT: The Below 2 Degrees C scenario assumes that climate policies
+  are introduced immediately and become gradually more stringent, giving a 67 percent
+  chance of limiting global warming to below 2 K. Deployment of CDR is relatively
+  low. Net-zero CO2 emissions are achieved after 2070. Physical and transition risks
+  are both relatively low. Industry sectors are modeled explicitly with individual
+  CES nests for cement, chemicals, steel, and other production. The transport model
+  EDGE-T with detailed modes/vehicles representation is used. A simple buildings model
+  represents demand in terms of energy carriers. Damages from climate change based
+  on Kalkuhl and Wenz (2020) are internalized in the optimization using the 95th percentile
+  of RCP26.'
+start: d95high_bIT
+referenceScenario: SSP2-Base_d95high_bIT
+slurmConfig: 14.0
+settings:
+  internalizeDamages: KW_SEitr
+  cm_magicc_temperatureImpulseResponse: 'on'
+  cm_EDGEtr_scen: Mix4
+  cm_reducCostB: heatpumps
+  cm_rcp_scen: rcp26
+  cm_iterative_target_adj: 9
+  subsidizeLearning: globallyOptimal
+  c_budgetCO2from2020: 1050
+  carbonprice: diffCurvPhaseIn2Lin
+  cm_co2_tax_2020: 100
+  cm_peakBudgYr: 2080
+  cm_emiscen: 9
+  cm_maxProdBiolc: '100'
+  techpol: NDC
+  cm_startyear: 2025
+  path_gdx: o_2c_bIT
+  path_gdx_ref: h_ndc_d95high_bIT

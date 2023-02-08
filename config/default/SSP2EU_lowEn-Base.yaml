@@ -1,0 +1,7 @@
+description: 'SSP2EU_lowEn-Base: This baseline calibration scenario follows the Shared
+  Socioeconomic Pathways 2 called Middle of the Road. This scenario also assumes low
+  energy demand trajectories.'
+start: '1'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_demScen: gdp_SSP2_lowEn

@@ -1,0 +1,38 @@
+description: 'd_delfrag_bIT_46NDC: The Delayed Transition scenario assumes global
+  annual emissions do not decrease until 2030. Strong policies are then needed to
+  limit warming to below 2 K. The level of action differs across countries and regions
+  based on currently implemented policies, leading to a fossil recovery out of the
+  economic crisis brought about by COVID-19. The availability of CDR technologies
+  is assumed to be low. Emissions exceed the carbon budget temporarily and decline
+  more rapidly than in Well-below 2 K after 2030 to ensure a 67 percent chance of
+  limiting global warming to below 2 K. This leads to considerable transition and
+  physical risks. Industry sectors are modeled explicitly with individual CES nests
+  for cement, chemicals, steel, and other production. The transport model EDGE-T with
+  detailed modes/vehicles representation is used. A simple buildings model represents
+  demand in terms of energy carriers. No Damages from climate change are considered.'
+start: '0'
+referenceScenario: SSP2-Base_covidCalib_bIT
+slurmConfig: 5.0
+settings:
+  CES_parameters: load
+  cm_magicc_config: RCP26_50
+  cm_damages_BurkeLike_persistenceTime: 30
+  c_CES_calibration_new_structure: 0
+  cm_reducCostB: heatpumps
+  c_ccsinjecratescen: 2
+  c_ccsinjecrateRegi: GLO 0.00125, CAZ_regi 0.0045, CHA_regi 0.004, EUR_regi 0.0045,
+    IND_regi 0.004, JPN_regi 0.002, USA_regi 0.002
+  cm_rcp_scen: rcp26
+  cm_iterative_target_adj: 9
+  subsidizeLearning: globallyOptimal
+  c_budgetCO2from2020: 1010
+  carbonprice: diffCurvPhaseIn2Lin
+  carbonpriceRegi: NDC
+  cm_co2_tax_2020: 100
+  cm_peakBudgYr: 2080
+  cm_emiscen: 9
+  cm_maxProdBiolc: '100'
+  techpol: NDC
+  cm_startyear: 2035
+  path_gdx_ref: h_cpol_bIT
+  path_gdx_bau: SSP2-Base_bIT

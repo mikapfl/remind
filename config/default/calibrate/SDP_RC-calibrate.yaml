@@ -1,0 +1,27 @@
+description: 'SDP_RC-calibration: This baseline calibration scenario follows the Sustainable
+  Development Pathway scenario following the narrative of "Resilient communities":  human
+  well-being - behavioural change - local & less tech-driven.'
+start: calibrate
+referenceScenario: SSP2EU-calibrate
+slurmConfig: 14.0
+settings:
+  cm_CO2priceRegConvEndYr: 2060
+  c_regi_earlyreti_rate: GLO 0.12, EUR_regi 0.15
+  cm_fetaxscen: 4
+  cm_co2_tax_growth: 1.025
+  cm_bioenergy_SustTax: 2.0
+  cm_maxProdBiolc: '100'
+  c_ccsinjecratescen: 5
+  cm_POPscen: pop_SDP_RC
+  cm_GDPscen: gdp_SDP_RC
+  cm_demScen: gdp_SDP_RC
+  cm_oil_scen: lowOil
+  cm_gas_scen: lowGas
+  cm_coal_scen: lowCoal
+  c_techAssumptScen: 2
+  cm_so2tax_scen: 4
+  cm_LU_emi_scen: SDP
+  cm_1stgen_phaseout: 1
+  c_SSP_forcing_adjust: forcing_SSP1
+  cm_APscen: SSP1
+  cm_EDGEtr_scen: Mix3

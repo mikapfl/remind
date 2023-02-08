@@ -1,0 +1,23 @@
+description: 'SSP2EU-NDC: This Nationally Determined Contribution (NDC) scenario follows
+  the Shared Socioeconomic Pathways 2 called Middle of the Road. The NDC includes
+  all pledged policies even if not yet implemented. It assumes that the moderate and
+  heterogeneous climate ambition reflected in the NDCs at the begining of 2021 continues
+  over the 21st century. This scenario serves as reference for all other policy scenarios
+  and The NPi scenario until 2020.'
+start: '1'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_rcp_scen: rcp45
+  cm_iterative_target_adj: 3
+  subsidizeLearning: globallyOptimal
+  carbonprice: NDC
+  cm_co2_tax_2020: 1
+  cm_emiscen: 9
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.13
+  techpol: NDC
+  cm_multigasscen: 3
+  cm_EDGEtr_scen: Mix2
+  cm_startyear: 2015
+  path_gdx_ref: SSP2EU-Base
+  path_gdx_bau: SSP2EU-Base

@@ -1,0 +1,22 @@
+description: 'SSP1-Base: This baseline scenario follows the Shared Socioeconomic Pathways
+  1 called Sustainability.'
+start: '1'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_fetaxscen: 2
+  cm_co2_tax_growth: 1.025
+  cm_bioenergy_SustTax: 1.75
+  c_ccsinjecratescen: 2
+  cm_POPscen: pop_SSP1
+  cm_GDPscen: gdp_SSP1
+  cm_demScen: gdp_SSP1
+  cm_oil_scen: lowOil
+  cm_gas_scen: lowGas
+  cm_coal_scen: lowCoal
+  c_techAssumptScen: 2
+  cm_so2tax_scen: 4
+  cm_LU_emi_scen: SSP1
+  cm_tradecostBio: 0.5
+  cm_1stgen_phaseout: 1
+  c_SSP_forcing_adjust: forcing_SSP1
+  cm_APscen: SSP1

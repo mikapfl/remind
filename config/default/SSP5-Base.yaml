@@ -1,0 +1,23 @@
+description: 'SSP5-Base: This baseline scenario follows the Shared Socioeconomic Pathways
+  5 called Fossil-Fueled Development.'
+start: '1'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_fetaxscen: 1
+  cm_bioenergy_SustTax: 1.75
+  c_ccsinjecratescen: 3
+  c_ccscapratescen: 2
+  cm_POPscen: pop_SSP5
+  cm_GDPscen: gdp_SSP5
+  cm_demScen: gdp_SSP5
+  cm_oil_scen: highOil
+  cm_gas_scen: highGas
+  cm_coal_scen: highCoal
+  c_techAssumptScen: 3
+  cm_nucscen: 6
+  cm_so2tax_scen: 4
+  cm_LU_emi_scen: SSP5
+  cm_tradecostBio: 0.5
+  cm_1stgen_phaseout: 1
+  c_SSP_forcing_adjust: forcing_SSP5
+  cm_APscen: SSP5

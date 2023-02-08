@@ -1,0 +1,27 @@
+description: 'o_2c_dni50_fixCprice_bIT:  a test run fixing the carbon price to the
+  one from the fully integrated o_2c_d50 scenario'
+start: '0'
+referenceScenario: SSP2-Base_covidCalib_bIT
+settings:
+  CES_parameters: load
+  climate: magicc
+  downscaleTemperature: CMIP5
+  cm_magicc_calibrateTemperature2000: HADCRUT4
+  damages: KWLike
+  cm_magicc_config: RCP26_50
+  c_CES_calibration_new_structure: 0
+  cm_EDGEtr_scen: Mix4
+  cm_reducCostB: heatpumps
+  cm_rcp_scen: rcp26
+  subsidizeLearning: globallyOptimal
+  c_budgetCO2from2020: 1050
+  carbonprice: exogenous
+  cm_co2_tax_2020: 100
+  cm_peakBudgYr: 2080
+  cm_emiscen: 9
+  cm_maxProdBiolc: '100'
+  techpol: NDC
+  cm_startyear: 2025
+  path_gdx: o_2c_bIT
+  path_gdx_ref: h_ndc_d50_bIT
+  path_gdx_bau: SSP2-Base_bIT

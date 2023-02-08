@@ -1,0 +1,29 @@
+description: 'SDP_EI-Base: This baseline scenario follows the Sustainable Development
+  Pathway scenario following the narrative of "Economy-driven innovation": tech &
+  market driven - globalized word - high-growth.'
+start: '0'
+referenceScenario: SSP2EU-Base
+settings:
+  c_regi_earlyreti_rate: GLO 0.14, EUR_regi 0.15
+  cm_fetaxscen: 2
+  cm_co2_tax_growth: 1.025
+  cm_bioenergy_SustTax: 1.75
+  cm_maxProdBiolc: '300'
+  c_ccscapratescen: 2
+  cm_CESMkup_build: feelhpb 1.05, fehob 1.75, feheb 0.1
+  cm_CESMkup_ind: feh2_otherInd 1.04, feelhth_otherInd 0.4, feh2_cement 2.0, feelhth_chemicals
+    1.3, feh2_chemicals 1.04
+  cm_POPscen: pop_SDP_EI
+  cm_GDPscen: gdp_SDP_EI
+  cm_demScen: gdp_SDP_EI
+  cm_oil_scen: lowOil
+  cm_gas_scen: lowGas
+  cm_coal_scen: lowCoal
+  c_techAssumptScen: 2
+  cm_so2tax_scen: 4
+  cm_LU_emi_scen: SDP
+  cm_tradecostBio: 0.5
+  cm_1stgen_phaseout: 1
+  c_SSP_forcing_adjust: forcing_SSP1
+  cm_APscen: SSP1
+  cm_EDGEtr_scen: Mix4

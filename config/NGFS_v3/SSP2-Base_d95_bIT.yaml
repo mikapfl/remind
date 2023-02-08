@@ -1,0 +1,19 @@
+description: 'SSP2-Base_d95_bIT: This baseline scenario follows the Shared Socioeconomic
+  Pathways 2 called Middle of the Road. Industry sectors are modeled explicitly with
+  individual CES nests for cement, chemicals, steel, and other production. The transport
+  model EDGE-T with detailed modes/vehicles representation is used. A simple buildings
+  model represents demand in terms of energy carriers. Damages from climate change
+  are based on Kalkuhl and Wenz (2020) using the 95th percentile of RCP26.'
+start: '0'
+referenceScenario: SSP2-Base_covidCalib_bIT
+settings:
+  CES_parameters: load
+  climate: magicc
+  downscaleTemperature: CMIP5
+  cm_magicc_calibrateTemperature2000: HADCRUT4
+  damages: KWLike
+  cm_magicc_config: RCP26_95
+  c_CES_calibration_new_structure: 0
+  cm_EDGEtr_scen: Mix1
+  path_gdx_ref: SSP2-Base_bIT
+  path_gdx_bau: SSP2-Base_bIT

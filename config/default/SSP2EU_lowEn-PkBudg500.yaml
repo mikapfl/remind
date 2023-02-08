@@ -1,0 +1,26 @@
+description: 'SSP2EU_lowEn-PkBudg500: This climate policy scenario follows the Shared
+  Socioeconomic Pathways 2 called Middle of the Road. This scenario also assumes low
+  energy demand trajectories. The stylized climate policy scenario assumes a peak
+  budget of 500 Gt?CO2 on total CO2 emissions from 2015 to 2100. This is a 1.5??C
+  scenario, peak warming is allowed to be at or slightly above 1.5??C, at median climate
+  sensitivity but returns to values below 1.5??C in at least 67?% of scenarios by
+  the end of the century.'
+start: '1'
+referenceScenario: SSP2EU-Base
+settings:
+  cm_rcp_scen: rcp20
+  cm_iterative_target_adj: 9
+  subsidizeLearning: globallyOptimal
+  c_budgetCO2from2020: 500
+  carbonprice: diffCurvPhaseIn2Lin
+  cm_co2_tax_2020: 100
+  cm_peakBudgYr: 2080
+  cm_emiscen: 9
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.13
+  techpol: NDC
+  cm_demScen: gdp_SSP2_lowEn
+  cm_EDGEtr_scen: Mix4
+  cm_startyear: 2025
+  path_gdx_ref: SSP2EU-NDC
+  path_gdx_bau: SSP2EU_lowEn-Base

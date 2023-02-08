@@ -1,0 +1,35 @@
+description: 'EU21reg_Bal: This policy scenario is based on the Shared Socioeconomic
+  Pathways 2 for the 21 region REMIND-EU version and describes the technology mix
+  (balanced) scenario used in the Ariadne project for pathways in line with the German
+  and EU climate neutrality goals. It features a couple of assumptions (restricted
+  CCS, biomass, regional policies etc.) that matter in particular for EU-specific
+  scenarios.'
+start: EU21
+referenceScenario: EU21reg_Base
+settings:
+  cm_rcp_scen: rcp20
+  cm_iterative_target_adj: 9
+  subsidizeLearning: globallyOptimal
+  c_budgetCO2from2020: 500
+  carbonprice: diffCurvPhaseIn2Lin
+  cm_co2_tax_2020: 100
+  cm_peakBudgYr: 2080
+  cm_emiscen: 9
+  c_tech_earlyreti_rate: GLO.(biodiesel 0.14, bioeths 0.14), EUR_regi.(biodiesel 0.15,
+    bioeths 0.15), USA_regi.pc 0.13, REF_regi.pc 0.13, CHA_regi.pc 0.13
+  cm_import_EU: bal
+  cm_import_tax: EU27_regi.pebiolc 3.0
+  c_agricult_base_shift: DEU -0.4
+  cm_CESMkup_build: fehob 1.75
+  cm_adj_coeff_multiplier: '0.5'
+  cm_adj_seed_multiplier: '2'
+  cm_emiMktTarget: 2020.2030.EU27_regi.all.year.netGHG_LULUCFGrassi_noBunkers 2.15,
+    2035.2050.EU27_regi.all.year.netGHG_LULUCFGrassi_noBunkers 0.01, 2020.2030.DEU.all.year.netGHG_noBunkers
+    0.46, 2035.2045.DEU.all.year.netGHG_noBunkers 0.001
+  cm_NucRegiPol: 'on'
+  cm_CoalRegiPol: 'on'
+  cm_1stgen_phaseout: 1
+  cm_EDGEtr_scen: Mix4
+  cm_startyear: 2025
+  path_gdx_ref: EU21reg_Ref-gd40
+  path_gdx_bau: EU21reg_Ref-gd40
